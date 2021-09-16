@@ -1,6 +1,11 @@
+########################################################################
+## CS 101 Lab
+## Program #2
+## Jacob Lee
+## Jllw4v@umsystem.edu
 print("**** Welcome to the LAB grade calculator! ****")
 print("")
-
+## Input's are the beginning of the program, initially it was just the inputs in order to get the users information for grades
 name = input("Who are we calculating grades for? ==> ")
 print("")
 
@@ -23,12 +28,12 @@ print("")
 
 attendance_grade = int(input("Enter the Attendance grade? ==> "))
 print("")
-
+# The calculations were the easiest part it was simple to multiply them by the user input stored by various variables, plus the algorithm for creating the grades were given.
 lab_weight = float(lab_grade) * .7
 exams_weight = float(exam_grade) * .2
 attendance_weight = float(attendance_grade) *.1
 weighted_grade = lab_weight + exams_weight + attendance_weight
-
+#The if statements were simple enough, as long as the grade is above x it would spit out an answer
 print("The weighted grade for", name,"is ", weighted_grade)
 if weighted_grade >= 90.0:
   print(name, "has a letter grade of A")
