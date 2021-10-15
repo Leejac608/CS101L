@@ -1,0 +1,65 @@
+####Jacob Lee####
+####CS101####
+####Caesar Cipher####
+####10/14/2021####
+def encrypt(text,s):
+  ####Setting result up as an empty string to use later####
+  result = ""
+  for i in range(len(text)):
+    char = text[i]
+     ####running through the string to store each letter as variable i####
+    if(char.isalpha()):
+      #Checking to see if the char is an alphabetical character####
+      if (char.isupper()):
+        #Checking to see if the letter is uppercase####
+          result += chr((ord(char) + s - 65 ) % 26 + 65)
+      else:
+        #The lowercase is in the else statement as all uppercase are covered above####
+          result += chr((ord(char) + s - 97) % 26 + 97)
+  return result
+def decrypt(text, s):
+  result=""
+  for i in range(len(text)):
+    char = text[i]
+    if(char.isalpha()):
+      if(char.isupper()):
+        result += chr((ord(char) - s - 65) % 26 + 65)
+      else:
+        result += chr((ord(char) - s - 97) % 26 + 97)
+  return result
+def main():
+  while True:
+      print("Welcome to Caesar Cipher")
+      print("e = encode a message")
+      print("d = decode a message")
+      print("q = quit")
+      user_choice = input("Please enter your choice: ")
+      if (user_choice == "q") or (user_choice == "Q"):
+        print("Caesar Thanks You!")
+        print("THE END")
+        break
+      elif user_choice == ("e") or user_choice == ("E"):
+        encode_string = input("Enter the string to encode: ")
+        key = int(input("Enter the amount to shift: "))
+        while key <= 0:
+          print("The key value must be greater than 0")
+          key = int(input("Enter the amount to shift: "))
+        while key > 25:
+          print("The key value must be less than or equal to 25")
+          key = int(input("Enter the amount to shift: "))
+        print("Encrypted text: " + encrypt(encode_string, key))
+      elif (user_choice =="d") or (user_choice == "D"):
+        encode_string = input("Enter the string to decode: ")
+        key = int(input("Enter the amount to shift: "))
+        while key <= 0:
+          print("The key value must be greater than 0")
+          key = int(input("Enter the amount to shift: "))
+        while key > 25:
+          print("The key value must be less than or equal to 25")
+          key = int(input("Enter the amount to shift: "))
+        print("Encrypted text: " + decrypt(encode_string, key))
+
+if __name__ == '__main__':
+  main()
+    
+    
