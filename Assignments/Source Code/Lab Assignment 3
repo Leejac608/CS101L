@@ -11,7 +11,7 @@ user_choice = 'y'
 #This while loop sets up the initialization of whether or not the player will play the game again, default of course, it is set to y or Y#
 while (user_choice == "y" or user_choice == "Y"):
   
-  print("Please think of a number between and including 1 and 100\n")
+  print('Please think of a number between and including 1 and 100\n')
 
 
 #These remainders set up the base values to be utilized later in the game#
