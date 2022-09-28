@@ -22,7 +22,7 @@ Algorithm
 import random 
 
 #Facts about myself
-'''
+
 data = [{
     "msg" : "I have a cat",
     "type" : "truth"
@@ -95,12 +95,3 @@ while True:
     continue
   else:
     break
-'''
-S = [1,2,4,5,2,4]
-for i in S:
-    for j in S:
-        if i < j:
-            print("yay")
-        elif i > j:
-            print("No")
-    
