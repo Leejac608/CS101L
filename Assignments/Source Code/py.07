@@ -2,7 +2,7 @@
 def get_minimum_mpg():
     while True:
         try:
-            min_mpg=float(input("Enter the minimum mpg ==> "))
+            min_mpg=float(input('Enter the minimum mpg ==> '))
             if min_mpg<0:
                 print('Fuel economy given must be greater than 0')
             elif min_mpg>100:
